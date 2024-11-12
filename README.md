@@ -31,7 +31,7 @@ The producer script is located in  `source/part_2/producer.py`. This code, provi
 
 Start the producer with the following command:
 ```shell
-python3 source/part_2/part_2_redis.py
+python3 source/part_2/producer.py
 ```
 
 ## Query the API.
