@@ -1,0 +1,26 @@
+black==24.10.0
+blinker==1.9.0
+cffi==1.17.1
+click==8.1.7
+cryptography==43.0.3
+Flask==3.0.3
+iniconfig==2.0.0
+itsdangerous==2.2.0
+Jinja2==3.1.4
+kafka-python @ git+https://github.com/dpkp/kafka-python.git@a6d0579d3cadd3826dd364b01bc12a2173139abc
+MarkupSafe==3.0.2
+mypy==1.13.0
+mypy-extensions==1.0.0
+packaging==24.2
+pathspec==0.12.1
+platformdirs==4.3.6
+pluggy==1.5.0
+pycparser==2.22
+pytest==8.3.3
+redis==5.2.0
+types-cffi==1.16.0.20240331
+types-pyOpenSSL==24.1.0.20240722
+types-redis==4.6.0.20241004
+types-setuptools==75.3.0.20241112
+typing_extensions==4.12.2
+Werkzeug==3.1.3
