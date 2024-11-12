@@ -27,7 +27,7 @@ def generate_timestamp():
 
 
 def generate_device_ip():
-    return ".".join(str(random.randint(0, 10)) for _ in range(4))
+    return ".".join(str(random.randint(0, 255)) for _ in range(4))
 
 
 def main():
