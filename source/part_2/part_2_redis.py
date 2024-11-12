@@ -26,14 +26,13 @@ consumer = KafkaConsumer(
 )
 
 
-def process_message(message):
+def process_message(message: dict) -> None:
     """Process a message to extract the IP address."""
-    device_ip = message.get("device_ip")
-    if device_ip:
+    if device_ip := message.get("device_ip"):
         redis_client.pfadd("unique_device_ips", device_ip)
 
 
-def consume_messages():
+def consume_messages() -> None:
     """Consume messages from Kafka and process each one."""
     for msg in consumer:
         process_message(msg.value)

@@ -1,14 +1,15 @@
+import flask
 import redis
-from flask import Flask, jsonify
+from flask.typing import ResponseReturnValue
 
 redis_client = redis.Redis(host="localhost", port=6379, db=0)
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 
 @app.route("/unique_ip_count", methods=["GET"])
-def get_unique_ip_count():
+def get_unique_ip_count() -> ResponseReturnValue:
     unique_count = redis_client.pfcount("unique_device_ips")
-    return jsonify({"unique_device_ip_count": unique_count})
+    return flask.jsonify({"unique_device_ip_count": unique_count})
 
 
 if __name__ == "__main__":

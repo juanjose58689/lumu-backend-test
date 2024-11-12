@@ -58,7 +58,7 @@ This will return a JSON response containing the current unique IP count:
 This implementation will handle incoming messages in a distributed manner by allowing each node to consume messages from Kafka and increment the unique IP count in Redis.
 
 - Kafka Consumer Group: Each node joins the same Kafka consumer group (unique_ip_counter_group), so Kafka will distribute the messages among the nodes in this group, allowing for horizontal scaling.
-- Redis HyperLogLog: Using pfadd and pfcount with Redis allows us to maintain an approximate unique IP count in a memory-efficient manner, even with large volumes of data.
+- Redis HyperLogLog: Using `pfadd` and `pfcount` with Redis allows us to maintain an approximate unique IP count in a memory-efficient manner, even with large volumes of data.
 - REST API: The API endpoint can run on any node, allowing us to query the current count from the centralized Redis HyperLogLog.
   
 ## Scalability Challenges
